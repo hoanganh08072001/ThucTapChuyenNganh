@@ -1,0 +1,70 @@
+.navbar{
+    background-color: #ff9c00;
+    height: 53px;
+    margin-bottom: 10px;
+    padding: 0 40px;
+    line-height: 53px;
+    color: #fff;
+    font-size: 14px;
+    font-family: Tahoma;
+    display: flex;
+}
+/* .navbar .item{
+} */
+.navbar .item-first{
+    display: flex;
+    width: 273px;
+    background-color: #FF7E00;
+    padding: 0 16px;
+}
+.navbar .item-first .icon-list{
+    flex: 1;
+}
+.navbar .list-option{
+    display: flex;
+}
+.navbar .list-option a{
+    text-decoration: none;
+    color: #fff;
+}
+.navbar .list-option{
+    padding-left: 35px;
+}
+.navbar .list-option .background{
+    background: rgba(255, 255, 255, 0.08) none repeat scroll 0 0;
+}
+.navbar .list-option .nav-item{
+    padding: 0 30px;
+    text-transform: uppercase;
+}
+.navbar .list-option .nav-item:hover{
+    background: rgba(255, 255, 255, 0.08) none repeat scroll 0 0;
+}
+.nav-child{
+    padding-left: 40px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 99;
+    top: 226px;
+}
+.nav-child a{
+    display: block;
+}
+.nav-child .nav-child-item{
+    width: 271px;
+    font-size: 12px;
+    font-family: Tahoma;
+    color: #aaaaaa;
+    padding: 13px;
+    border-bottom: 1px dotted #aaaaaa;
+    border-right: 1px dotted #aaaaaa;
+    border-left: 1px dotted #aaaaaa;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.nav-child .nav-child-item:hover{
+    color: #ff9c00;
+}
+.image img{
+    margin-left: 400px;
+}

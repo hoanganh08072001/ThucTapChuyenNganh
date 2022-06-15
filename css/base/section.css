@@ -1,0 +1,31 @@
+.section{
+    padding: 20px 40px;
+}
+.section img{
+    width: 293px;
+    height: 78px;
+    padding: 0 10px;
+    margin-bottom: 15px;
+}
+.section .list-info{
+    padding-left: 110px;
+    padding-right: 10px;
+    line-height: 93px;
+    display: flex;
+}
+.section .list-info .item{
+    display: flex;
+    margin-right: 50px;
+}
+.list-info .item .des{
+    text-transform: uppercase;
+    color: #aaaaaa;
+    font-size: 12px;
+    font-family: Tahoma;
+}
+.section .list-info .icon{
+    font-size: 24px;
+    color: #ff9c00;
+    line-height: 93px;
+    margin-right: 10px;
+}

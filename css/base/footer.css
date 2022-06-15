@@ -1,0 +1,83 @@
+.footer{
+    margin-top: 15px;
+    background-color: #3C3F44;
+    padding: 20px 0;
+    width: 100%;
+    font-size: 12px;
+    font-family:  Tahoma;
+    display: flex;
+    justify-content: center;
+}
+.footer .item{ 
+    width: 272px;
+    height: 228px;
+    margin-right: 20px;  
+}
+.footer .item .m-item{
+    border-bottom: 2px solid #ffffff;
+    margin-bottom: 25px;
+    color: #ffffff;
+    padding-bottom: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.footer .item .m-item span
+{
+    padding-bottom: 13px;
+    border-bottom: 2px solid #ff9c00;
+}
+.footer .item .text{
+    font-size: 12px;
+    font-family: Tahoma;
+    color: #AAAAAA;
+}
+.footer .item .text li{
+    padding: 10px 0 10px;  
+}
+.footer .item .text a{
+    color: #AAAAAA;
+    margin-left: 10px;
+    text-decoration: none;
+}
+.footer .item .text a:hover{
+    color: #ff9c00;
+    text-decoration: underline;
+}
+.footer .item .m-text{
+    color: #AAAAAA;
+    line-height: 30px;
+}
+.footer .item .m-text .m-conten{
+    margin-bottom: 10px;
+}
+.footer .item .m-text .m-conten i{
+    margin-right: 10px;
+}
+.footer .item .logo{
+    margin-top: 60px;
+    display: flex;
+}
+.footer .item .m-logo{
+    margin-right: 10px;
+    background-color: #ff9c00;
+    border-radius: 3px;
+    font-size: 20px;
+    height: 40px;
+    line-height: 20px;
+    padding: 10px;
+    text-align: center;
+    width: 40px;
+    transition: 0.3s;
+}
+.footer .item .m-logo a{
+    color: #ffffff;
+}
+.footer .item .m-logo:hover{
+    background-color: #ffffff;
+}
+.footer .item .m-logo a:hover{
+    color: #ff9c00;
+}
+body{
+    background-color: #ffffff;
+}

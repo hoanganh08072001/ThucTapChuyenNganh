@@ -1,0 +1,238 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebThucTap.Site1" %>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./resource/fontawesome-5.15.1/css/all.css">
+    <title>SUNSHOP Nhóm 12</title>
+    <style>
+        td, th {
+            padding: 40px;
+        }
+
+        .btn {
+            border-radius: 4px;
+            min-width: 50px;
+            background-color: orange;
+            margin-top: 20px;
+            margin-left: 90px;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            border: none;
+            font-size: 20px;
+        }
+
+            .btn a {
+                color: #ffffff;
+                text-decoration: none;
+            }
+
+        .btn-buy {
+            margin-left: 100px;
+        }
+
+        table {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form1" runat="server" action="ShoppingCart.aspx">
+        <!-- Header -->
+        <div class="row header">
+            <div class="col-half">
+                <i class="icon-phone fas fa-phone-alt"></i>
+                Hotline: 0908 77 00 95
+            </div>
+            <div class="col-half flex flex-end">
+                <%--<div class="item">
+                <i class="fas fa-edit"></i>
+                Danh sách hàng hóa
+            </div>--%>
+                <div class="item">
+                    <a href="AddProduct.aspx" style="color: #fff; text-decoration: none">
+                        <i class="fas fa-edit"></i>
+                        Thêm sản phẩm
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="DeleteProduct.aspx" style="color: #fff; text-decoration: none">
+                        <i class="fas fa-edit"></i>
+                        Xóa & sửa sản phẩm
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="ShoppingCart.aspx" style="color: #fff; text-decoration: none">
+                        <i class="fas fa-shopping-cart"></i>
+                        Giỏ hàng
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- End Header -->
+
+        <!-- Section -->
+        <div class="row section">
+            <img src="./resource/banner(1).png" alt="">
+            <div class="list-info">
+                <div class="item">
+                    <i class="icon fas fa-truck"></i>
+                    <div class="des">Giao hàng miễn phí</div>
+                </div>
+                <div class="item">
+                    <i class="icon fas fa-money-bill"></i>
+                    <div class="des">Thanh toán linh hoạt</div>
+                </div>
+                <div class="item">
+                    <i class="icon fas fa-sync"></i>
+                    <div class="des">Trả hàng trong 30 ngày</div>
+                </div>
+            </div>
+        </div>
+        <!-- End -->
+
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="item-first">
+                <div class="icon-list">
+                    <i class="fas fa-list"></i>
+                    DANH MỤC SẢN PHẨM
+                </div>
+                <div class="icon-down">
+                    <i class="fas fa-arrow-circle-down"></i>
+                </div>
+            </div>
+            <div class="list-option">
+                <a href="ListAllProduct.aspx" class="nav-item background" style="color: #fff; text-decoration: none;">Trang chủ</a>
+                <a href="https://whiteant.vn/?gclid=CjwKCAjw46CVBhB1EiwAgy6M4iSeidv0Hywwgufb2fa8EAe_Rtsgfd7s0hBJoGy11-YEPWb2HZoTtRoC7W4QAvD_BwE" class="nav-item" style="color: #fff; text-decoration: none;">Giới thiệu</a>
+                <a href="ListAllProduct.aspx" class="nav-item" style="color: #fff; text-decoration: none;">Sản phẩm</a>
+                <a href="https://vnexpress.net/" class="nav-item" style="color: #fff; text-decoration: none;">Tin tức</a>
+                <a href="https://www.facebook.com/groups/1260976790749329" class="nav-item" style="color: #fff; text-decoration: none;">Liên hệ</a>
+            </div>
+        </div>
+        <div class="nav-child">
+            <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
+                <ItemTemplate>
+                    <a href='ProductByCart.aspx?Categoryid=<%#Eval("Categoryid") %>' class="nav-child-item" style="display: block"><%#Eval("CategoryName") %></a>
+                </ItemTemplate>
+            </asp:Repeater>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ThucTapConnectionString %>" SelectCommand="SELECT * FROM [Category]"></asp:SqlDataSource>
+        </div>
+        <div class="image">
+            <img src="./resource/785x350 _ O1.jpg" alt="">
+        </div>
+        <!-- End Nav -->
+
+        <!-- Content -->
+        <asp:ContentPlaceHolder ID="noidung" runat="server"></asp:ContentPlaceHolder>
+        <!-- End Content -->
+
+
+        <!-- Partner -->
+        <div class="partner">
+            <div class="text">
+                ĐỐI TÁC
+            </div>
+            <div class="m-text">
+                <div class="img">
+                    <a href="#">
+                        <img src="./resource/dior.jpg" width="155px" height="100px"></a>
+                </div>
+                <div class="img">
+                    <a href="#">
+                        <img src="./resource/louis-vuitton-logo.jpg" width="155px" height="100px"></a>
+                </div>
+                <div class="img">
+                    <a href="#">
+                        <img src="./resource/nike-logo.jpg" width="155px" height="100px"></a>
+                </div>
+                <div class="img">
+                    <a href="#">
+                        <img src="./resource/y-nghia-logo-thuong-hieu-chanel.png" width="155px" height="100px"></a>
+                </div>
+                <div class="img">
+                    <a href="#">
+                        <img src="./resource/calvin-klein-logo.jpg" width="155px" height="100px"></a>
+                </div>
+                <div class="img">
+                    <a href="#">
+                        <img src="./resource/prada-logo-thumb.jpg" width="155px" height="100px"></a>
+                </div>
+            </div>
+        </div>
+        <!-- End Partner -->
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="item">
+                <div class="m-item">
+                    <span>VỀ CHÚNG TÔI</span>
+                </div>
+                <div class="text">
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Giao hàng - Đổi trả</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </div>
+            </div>
+            <div class="item">
+                <div class="m-item">
+                    <span>TRỢ GIÚP</span>
+                </div>
+                <div class="text">
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Hướng dẫn thanh toán</a></li>
+                    <li><a href="#">Tài khoản giao dịch</a></li>
+                </div>
+            </div>
+            <div class="item">
+                <div class="m-item">
+                    <span>THÔNG TIN CÔNG TY</span>
+                </div>
+                <div class="m-text">
+                    <div class="conten">
+                        CÔNG TY TNHH PHÁT TRIỂN CÔNG NGHỆ RUNTIME
+                    </div>
+                    <div class="m-conten">
+                        <i class="fas fa-map-marker-alt"></i>Cầu diễn, P.Bắc Từ Liêm, Hà Nội
+                    </div>
+                    <div class="m-conten">
+                        <i class="fas fa-envelope"></i>nhom12@gmail.com
+                    </div>
+                    <div class="m-conten">
+                        <i class="fas fa-phone"></i>0975896562
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="m-item">
+                    <span>FACEBOOK</span>
+                </div>
+                <div class="logo">
+                    <div class="m-logo">
+                        <a href=""><i class="fab fa-google"></i></a>
+                    </div>
+                    <div class="m-logo">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <div class="m-logo">
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="m-logo">
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer -->
+    </form>
+</body>
+
+</html>

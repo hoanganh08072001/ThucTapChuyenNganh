@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: cursive, Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+.row{
+    display: flex;
+}
+/* .col-970{
+    display: flex;
+    padding: 0px 10px;
+} */
+.col-half{
+    width: 50%;
+}
+.flex{
+    display: flex;
+}
+.flex-end{
+    justify-content: end;
+}
